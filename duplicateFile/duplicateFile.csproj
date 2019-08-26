@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{18B90D35-AD14-4B8C-BAEB-DB8897B42C0C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>duplicateFile</RootNamespace>
+    <AssemblyName>duplicateFile</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\dev\publication\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icone.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>6D1FA474CF2A71620847FA330B2BE99CC56339B1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>duplicateFile_CléTemporaire.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>duplicateFile_CléTemporaire.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\..\Visual studio\CRM\CRM\bin\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="JDComponentLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Visual studio\JDComponentLib\JDComponentLib\bin\Release\JDComponentLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Visual Studio Tools for Office\PIA\Office15\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.PowerPoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Visual Studio Tools for Office\PIA\Office15\Microsoft.Office.Interop.PowerPoint.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Visual Studio Tools for Office\PIA\Office15\Microsoft.Office.Interop.Word.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\ISAPI\Microsoft.SharePoint.Client.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Win32.TaskScheduler">
+      <HintPath>..\..\..\..\Visual studio\test\timer\taskshedulerlibrary\v4.0\Microsoft.Win32.TaskScheduler.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.DocumentObjectModel, Version=1.32.3885.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Visual studio\test\migradoc patch\MigraDoc.DocumentObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="MigraDoc.Rendering, Version=1.32.3885.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Visual studio\test\migradoc patch\MigraDoc.Rendering.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Office, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>C:\Program Files (x86)\Microsoft Visual Studio 11.0\Visual Studio Tools for Office\PIA\Office15\Office.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Charts\SizeByPath.cs" />
+    <Compile Include="Classes\Charts\NewDuplicateSizeByUser.cs" />
+    <Compile Include="Classes\Charts\SizeDupFileByTime.cs" />
+    <Compile Include="Classes\Charts\NbrDupFileByTime.cs" />
+    <Compile Include="Classes\Charts\NbrFileByTime.cs" />
+    <Compile Include="Classes\Qualifier\Adress.cs" />
+    <Compile Include="Classes\Qualifier\mail.cs" />
+    <Compile Include="Classes\Qualifier\Phone.cs" />
+    <Compile Include="Classes\Qualifier\FirstName.cs" />
+    <Compile Include="Classes\Qualifier\IQualifier.cs" />
+    <Compile Include="Classes\Qualifier\Qualifier.cs" />
+    <Compile Include="Classes\Qualifier\SearchMethod.cs" />
+    <Compile Include="Classes\Qualifier\SearchResult.cs" />
+    <Compile Include="Classes\Qualifier\SearchTools.cs" />
+    <Compile Include="Classes\SMTPHelper.cs" />
+    <Compile Include="Classes\Tools\LnkReader.cs" />
+    <Compile Include="Classes\Tools\ResourceHelper.cs" />
+    <Compile Include="Classes\Tools\Analyser.cs" />
+    <Compile Include="Classes\Charts\ByStatus.cs" />
+    <Compile Include="Classes\Charts\DuplicateSizeByExt.cs" />
+    <Compile Include="Classes\Charts\DuplicateSizeByUser.cs" />
+    <Compile Include="Classes\Charts\DuplicateNbrByUser.cs" />
+    <Compile Include="Classes\Charts\NbrByAccAge.cs" />
+    <Compile Include="Classes\Charts\ExtByType.cs" />
+    <Compile Include="Classes\Charts\ChartTools.cs" />
+    <Compile Include="Classes\Charts\ExtBySize.cs" />
+    <Compile Include="Classes\Charts\NbrByModAge.cs" />
+    <Compile Include="Classes\Objects\Config.cs" />
+    <Compile Include="Classes\Tools\ContentHash.cs" />
+    <Compile Include="Classes\Data\dataTools.cs" />
+    <Compile Include="Classes\Tools\EncryptString.cs" />
+    <Compile Include="Classes\Exports\excelExport.cs" />
+    <Compile Include="Classes\Exports\PDFExport.cs" />
+    <Compile Include="Classes\Exports\PDFTableHelper.cs" />
+    <Compile Include="Classes\Objects\FileSize.cs" />
+    <Compile Include="Classes\Objects\Job.cs" />
+    <Compile Include="Classes\Objects\SchedulerTrigger.cs" />
+    <Compile Include="Classes\Tools\SimpleLog.cs" />
+    <Compile Include="Classes\Charts\StatChart.cs" />
+    <Compile Include="Classes\Tools\SPTools.cs" />
+    <Compile Include="Classes\Objects\Stats.cs" />
+    <Compile Include="Classes\Tools\TimeSpanExtension.cs" />
+    <Compile Include="Classes\Objects\WaitingFormProperties.cs" />
+    <Compile Include="configForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configForm.Designer.cs">
+      <DependentUpon>configForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="foldersSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="foldersSelect.Designer.cs">
+      <DependentUpon>foldersSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobEditor.Designer.cs">
+      <DependentUpon>JobEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobHistory.Designer.cs">
+      <DependentUpon>JobHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobList.Designer.cs">
+      <DependentUpon>JobList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Tools\officeConverter.cs" />
+    <Compile Include="pathCorrector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pathCorrector.Designer.cs">
+      <DependentUpon>pathCorrector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Languages\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Stats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stats.Designer.cs">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userForm.Designer.cs">
+      <DependentUpon>userForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Waiting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Waiting.Designer.cs">
+      <DependentUpon>Waiting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="configForm.de.resx">
+      <DependentUpon>configForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configForm.en.resx">
+      <DependentUpon>configForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configForm.es.resx">
+      <DependentUpon>configForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configForm.resx">
+      <DependentUpon>configForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="foldersSelect.de.resx">
+      <DependentUpon>foldersSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="foldersSelect.en.resx">
+      <DependentUpon>foldersSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="foldersSelect.es.resx">
+      <DependentUpon>foldersSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="foldersSelect.resx">
+      <DependentUpon>foldersSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobEditor.de.resx">
+      <DependentUpon>JobEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobEditor.en.resx">
+      <DependentUpon>JobEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobEditor.es.resx">
+      <DependentUpon>JobEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobEditor.resx">
+      <DependentUpon>JobEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobHistory.de.resx">
+      <DependentUpon>JobHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobHistory.en.resx">
+      <DependentUpon>JobHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobHistory.es.resx">
+      <DependentUpon>JobHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobHistory.resx">
+      <DependentUpon>JobHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobList.de.resx">
+      <DependentUpon>JobList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobList.en.resx">
+      <DependentUpon>JobList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobList.es.resx">
+      <DependentUpon>JobList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobList.resx">
+      <DependentUpon>JobList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.de.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.en.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.es.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pathCorrector.de.resx">
+      <DependentUpon>pathCorrector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pathCorrector.en.resx">
+      <DependentUpon>pathCorrector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pathCorrector.es.resx">
+      <DependentUpon>pathCorrector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pathCorrector.resx">
+      <DependentUpon>pathCorrector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.de.resx" />
+    <EmbeddedResource Include="Properties\Resources.en.resx" />
+    <EmbeddedResource Include="Properties\Resources.es.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Languages\Resources.de.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Languages\Resources.en.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Languages\Resources.es.resx" />
+    <EmbeddedResource Include="Resources\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stats.de.resx">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stats.en.resx">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stats.es.resx">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stats.resx">
+      <DependentUpon>Stats.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userForm.resx">
+      <DependentUpon>userForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Waiting.de.resx">
+      <DependentUpon>Waiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Waiting.en.resx">
+      <DependentUpon>Waiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Waiting.es.resx">
+      <DependentUpon>Waiting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Waiting.resx">
+      <DependentUpon>Waiting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Languages\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="duplicateFile_CléTemporaire.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ouvrir_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\ouvrir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\dossier_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\dossier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\corbeille.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\corbeille_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\excel_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corbeille_a.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corbeille_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dossier_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dossier_a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dossier_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dossier_e1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dossier_a2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ouvrir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ouvrir_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ouvrir_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ouvrir1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ouvrir_a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ouvrir_e1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ouvrir_e2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ouvrir_a2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corbeille_a1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corbeille_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel_e1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\corbeille_e1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enrg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enrg_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\enrg_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ouvr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ouvr_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ouvr_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\corr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\corr_a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\corr_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stats.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hash_e.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icone.ico" />
+    <None Include="Resources\user_e.png" />
+    <None Include="Resources\user_a.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\horloge.png" />
+    <None Include="Resources\config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

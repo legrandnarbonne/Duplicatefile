@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="chkExt.Text" xml:space="preserve">
+    <value>Verwenden Sie Datei-Erweiterungen zum Einschränken der Suche auf doppelte!</value>
+  </data>
+  <data name="txtEcart.Text" xml:space="preserve">
+    <value>200</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Vergleichen Sie Office-Dateien mit einer Maximalgröße Abweichung:!</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Bytes</value>
+  </data>
+  <data name="txtTaille.Text" xml:space="preserve">
+    <value>0!</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Mindestgröße der gescannten Datei:!</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Bytes</value>
+  </data>
+  <data name="grpDuplicate.Text" xml:space="preserve">
+    <value>Optionen</value>
+  </data>
+  <data name="chkDoublons.Text" xml:space="preserve">
+    <value>Dubletten suchen!</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>Verhalten</value>
+  </data>
+  <data name="chkSharePoint.Text" xml:space="preserve">
+    <value>SharePoint-Modus zu aktivieren!</value>
+  </data>
+  <data name="cmbSPDisk.Items" xml:space="preserve">
+    <value>-!</value>
+  </data>
+  <data name="cmbSPDisk.Items1" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="cmbSPDisk.Items2" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="cmbSPDisk.Items3" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="cmbSPDisk.Items4" xml:space="preserve">
+    <value>D</value>
+  </data>
+  <data name="cmbSPDisk.Items5" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="cmbSPDisk.Items6" xml:space="preserve">
+    <value>F</value>
+  </data>
+  <data name="cmbSPDisk.Items7" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="cmbSPDisk.Items8" xml:space="preserve">
+    <value>H</value>
+  </data>
+  <data name="cmbSPDisk.Items9" xml:space="preserve">
+    <value>I </value>
+  </data>
+  <data name="cmbSPDisk.Items10" xml:space="preserve">
+    <value>J</value>
+  </data>
+  <data name="cmbSPDisk.Items11" xml:space="preserve">
+    <value>K</value>
+  </data>
+  <data name="cmbSPDisk.Items12" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="cmbSPDisk.Items13" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="cmbSPDisk.Items14" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="cmbSPDisk.Items15" xml:space="preserve">
+    <value>O</value>
+  </data>
+  <data name="cmbSPDisk.Items16" xml:space="preserve">
+    <value>B</value>
+  </data>
+  <data name="cmbSPDisk.Items17" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="cmbSPDisk.Items18" xml:space="preserve">
+    <value>R</value>
+  </data>
+  <data name="cmbSPDisk.Items19" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="cmbSPDisk.Items20" xml:space="preserve">
+    <value>T</value>
+  </data>
+  <data name="cmbSPDisk.Items21" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="cmbSPDisk.Items22" xml:space="preserve">
+    <value>V</value>
+  </data>
+  <data name="cmbSPDisk.Items23" xml:space="preserve">
+    <value>W</value>
+  </data>
+  <data name="cmbSPDisk.Items24" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="cmbSPDisk.Items25" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="cmbSPDisk.Items26" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Den entsprechenden Netzwerk-Laufwerkbuchstaben:!</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Adresse des Sharepoint-Servers:!</value>
+  </data>
+  <data name="chkSPaspx.Text" xml:space="preserve">
+    <value>Die Aspx-Dateien ignorieren.!</value>
+  </data>
+  <data name="chkSPfolders.Text" xml:space="preserve">
+    <value>Die SharePoint-Ordner ignorieren.!</value>
+  </data>
+  <data name="grpSP.Text" xml:space="preserve">
+    <value>SharePoint-Optionen!</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Sharepoint</value>
+  </data>
+  <data name="chkBDD.Text" xml:space="preserve">
+    <value>Verwenden Sie eine Datenbank!</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Datenbankname:!</value>
+  </data>
+  <data name="txtMDP.Text" xml:space="preserve">
+    <value>0!</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Passwort:</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>User:</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Hostname:!</value>
+  </data>
+  <data name="grpBDD.Text" xml:space="preserve">
+    <value>Verbindung zu einer Datenbank!</value>
+  </data>
+  <data name="tabPage3.Text" xml:space="preserve">
+    <value>Datenbank</value>
+  </data>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Trace-Level:!</value>
+  </data>
+  <data name="cmbVerbose.Items" xml:space="preserve">
+    <value>SEHR WICHTIG!</value>
+  </data>
+  <data name="cmbVerbose.Items1" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="cmbVerbose.Items2" xml:space="preserve">
+    <value>schwach</value>
+  </data>
+  <data name="chkEmail.Text" xml:space="preserve">
+    <value>Senden Sie den Bericht per e-Mail!</value>
+  </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>Berichte zu senden!</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Verwenden Sie den Mailserver:!</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Berichte zu senden!</value>
+  </data>
+  <data name="grpEmail.Text" xml:space="preserve">
+    <value>Generierung von Berichten!</value>
+  </data>
+  <data name="chkLog.Text" xml:space="preserve">
+    <value>Generieren Sie Spuren-Fehler!</value>
+  </data>
+  <data name="tabPage4.Text" xml:space="preserve">
+    <value>Rapport</value>
+  </data>
+  <data name="btnRecord.Text" xml:space="preserve">
+    <value>Anmelden</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Konfiguration</value>
+  </data>
+  <data name="txtQualifierMini.Text" xml:space="preserve">
+    <value>100%</value>
+  </data>
+  <data name="label15.Text" xml:space="preserve">
+    <value>Steuerdateien größer als:!</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Bytes</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Machen Sie die Forschung :!</value>
+  </data>
+  <data name="chkSPLnk.Text" xml:space="preserve">
+    <value>Folgen Sie der Lnk-Datei des Stammordners!</value>
+  </data>
+  <data name="chkLstErr.Text" xml:space="preserve">
+    <value>Füge eine Fehlerliste bei!</value>
+  </data>
+  <data name="chkOneMail.Text" xml:space="preserve">
+    <value>Senden Sie eine E-Mail als Anhang!</value>
+  </data>
+  <data name="chkAttStats.Text" xml:space="preserve">
+    <value>Statistik anhängen (Datenbankmodus)!</value>
+  </data>
+  <data name="chkAttDup.Text" xml:space="preserve">
+    <value>Fügen Sie die Liste der Duplikate bei!</value>
+  </data>
+</root>
