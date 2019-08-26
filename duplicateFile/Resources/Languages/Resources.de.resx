@@ -1,0 +1,366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Txt_Confirmez_vous_la_correction" xml:space="preserve">
+    <value>Bestätigen Sie die Korrektur des Namens:!</value>
+  </data>
+  <data name="Txt_Annuler" xml:space="preserve">
+    <value>Abbrechen</value>
+  </data>
+  <data name="Txt_Le_fichier__" xml:space="preserve">
+    <value>Die Datei "!"</value>
+  </data>
+  <data name="Txt_Selectionnez_un_fichier" xml:space="preserve">
+    <value>Wählen Sie eine Datei!</value>
+  </data>
+  <data name="Txt_Le_paramètre___0___n_a_pas_une_valeur_correcte" xml:space="preserve">
+    <value>Parameter "{0}" ist keinen richtigen Wert!</value>
+  </data>
+  <data name="Txt___0__caractères_" xml:space="preserve">
+    <value>({0} Zeichen enthalten)</value>
+  </data>
+  <data name="Txt_duplicate_file_search" xml:space="preserve">
+    <value>Phase 2/2: sucht nach doppelten...!</value>
+  </data>
+  <data name="Txt_Confirmation" xml:space="preserve">
+    <value>Firmung</value>
+  </data>
+  <data name="Txt_correction_s__effectuée_s__" xml:space="preserve">
+    <value>Korrektur (s) durchgeführt (s).!</value>
+  </data>
+  <data name="Txt_Si_vous_continuez_les_données_actuelles_seront_perdues__Souhaitez_vous_continuer_" xml:space="preserve">
+    <value>Wenn Sie fortfahren, werden die aktuellen Daten gelöscht. Würden Sie fortfahren?</value>
+  </data>
+  <data name="Error_n_a_pu_etre_converti" xml:space="preserve">
+    <value>"nur konnte konvertiert werden!"</value>
+  </data>
+  <data name="Txt_Analyse____afd____afd" xml:space="preserve">
+    <value>Analyse (*.afd) | * .afd!</value>
+  </data>
+  <data name="Txt_Analyse_des_fichiers_en_cours___" xml:space="preserve">
+    <value>Analyse der aktuellen Dateien...!</value>
+  </data>
+  <data name="Txt_Analyse_en_cours___" xml:space="preserve">
+    <value>Scannen Sie in Progress...!</value>
+  </data>
+  <data name="Txt_Conversion_en_cours___" xml:space="preserve">
+    <value>Konvertierung in Progress...!</value>
+  </data>
+  <data name="Txt_Information" xml:space="preserve">
+    <value>Information!</value>
+  </data>
+  <data name="Txt_La_table_de_correspondance_a_étée_modifiée_souhaitez_vous_enregistrer_les_modifications_" xml:space="preserve">
+    <value>Die Tabelle der Entsprechungen zwischen wurde geändert, würde Sie Änderungen speichern?</value>
+  </data>
+  <data name="Txt_Suppression_des_fichiers_en_cours___" xml:space="preserve">
+    <value>Löschen von Dateien in Progress...!</value>
+  </data>
+  <data name="Error_Conversion" xml:space="preserve">
+    <value>Fehler bei der Umwandlung von {0}: {1}!</value>
+  </data>
+  <data name="Txt_Analyser" xml:space="preserve">
+    <value>Diverse</value>
+  </data>
+  <data name="Txt_Getting_File_List" xml:space="preserve">
+    <value>Phase 1/2: Aufzählung der Dateien...!</value>
+  </data>
+  <data name="Txt_Export_Excel_PDF" xml:space="preserve">
+    <value>Excel-Export</value>
+  </data>
+  <data name="Txt_Repertoire_Analyses" xml:space="preserve">
+    <value>{0} gescannt Verzeichnisse, {1} {2} Datei.!</value>
+  </data>
+  <data name="Txt_vous_êtes_sur_le_point_de_supprimer_definitivement_le_s__fichier_s___Confirmez_vous_cette_opération_" xml:space="preserve">
+    <value>Sie sind dabei, die Akte (s) (s) endgültig löschen! Können Sie diesen Vorgang bestätigen?</value>
+  </data>
+  <data name="Txt_Files" xml:space="preserve">
+    <value>Dateien</value>
+  </data>
+  <data name="Erreur" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="Txt__0__chemin_s__détecté_s_" xml:space="preserve">
+    <value>{0} Pfad (s) erkannt (s)!</value>
+  </data>
+  <data name="Error_Supp" xml:space="preserve">
+    <value>Die Streichung von {0} Fehler: {1}!</value>
+  </data>
+  <data name="Txt_Files_Seconde" xml:space="preserve">
+    <value>Dateien/Sek.!</value>
+  </data>
+  <data name="Txt_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Txt_Analyse_des_résultats" xml:space="preserve">
+    <value>Analyse, Ergebnisse</value>
+  </data>
+  <data name="Error_pendant_le_renomage" xml:space="preserve">
+    <value>Fehler beim Umbenennen von:!</value>
+  </data>
+  <data name="Txt_Enregistrer_l_analyse" xml:space="preserve">
+    <value>Die Analyse zu speichern!</value>
+  </data>
+  <data name="Txt_Rafraichissement_de_l_affichage___" xml:space="preserve">
+    <value>... Display-Refresh!</value>
+  </data>
+  <data name="Txt_En" xml:space="preserve">
+    <value>EN</value>
+  </data>
+  <data name="Txt_Created" xml:space="preserve">
+    <value>Erstellt am</value>
+  </data>
+  <data name="Txt_LastAccess" xml:space="preserve">
+    <value>Zuletzt online!</value>
+  </data>
+  <data name="Txt_Modified" xml:space="preserve">
+    <value>Geändert am</value>
+  </data>
+  <data name="Txt_Original" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="Txt_User" xml:space="preserve">
+    <value>Benutzer</value>
+  </data>
+  <data name="Error_Network_Drive" xml:space="preserve">
+    <value>Fehler in Verbindung mit dem Netzwerk-Laufwerk!</value>
+  </data>
+  <data name="Error_Creation_tache" xml:space="preserve">
+    <value>Fehler bei der Erstellung der Aufgabe</value>
+  </data>
+  <data name="Txt_0_Fichiers" xml:space="preserve">
+    <value>{0} Dateien</value>
+  </data>
+  <data name="Txt_Caracteres" xml:space="preserve">
+    <value>Zeichen!</value>
+  </data>
+  <data name="Txt_Chargement_des_données" xml:space="preserve">
+    <value>Lade Daten...</value>
+  </data>
+  <data name="Txt_Generation_Rapport" xml:space="preserve">
+    <value>Generation der Bericht...!</value>
+  </data>
+  <data name="Txt_LA_Base_est_inaccessible" xml:space="preserve">
+    <value>Die Datenbank kann nicht zugegriffen werden, wird seine Verwendung deaktiviert.!</value>
+  </data>
+  <data name="Txt_Modifier" xml:space="preserve">
+    <value>Ändern</value>
+  </data>
+  <data name="Txt_Remplacer_Par" xml:space="preserve">
+    <value>Ersetzen Sie durch!</value>
+  </data>
+  <data name="Txt_Resultat" xml:space="preserve">
+    <value>Resultat</value>
+  </data>
+  <data name="Txt_Tout_Fichiers" xml:space="preserve">
+    <value>Alle Dateien (*. *) | *. *!</value>
+  </data>
+  <data name="Error_Nom_Utilisateur_Non_Vide" xml:space="preserve">
+    <value>Der Benutzername und das Kennwort darf nicht leer sein!</value>
+  </data>
+  <data name="isOriginal" xml:space="preserve">
+    <value>Original</value>
+  </data>
+  <data name="CalculatedHash" xml:space="preserve">
+    <value>Prüfsumme berechnet!</value>
+  </data>
+  <data name="created" xml:space="preserve">
+    <value>Erstellt am</value>
+  </data>
+  <data name="DeletedFiles" xml:space="preserve">
+    <value>Gelöschte Dateien!</value>
+  </data>
+  <data name="DuplicateFileSize" xml:space="preserve">
+    <value>Doppelte Dateien Größe!</value>
+  </data>
+  <data name="EndDate" xml:space="preserve">
+    <value>Enddatum</value>
+  </data>
+  <data name="lastAccess" xml:space="preserve">
+    <value>Zuletzt online!</value>
+  </data>
+  <data name="Modified" xml:space="preserve">
+    <value>Modifizierte</value>
+  </data>
+  <data name="NewFiles" xml:space="preserve">
+    <value>Neue Dateien</value>
+  </data>
+  <data name="NumberOfDir" xml:space="preserve">
+    <value>Gescannte Verzeichnisse!</value>
+  </data>
+  <data name="NumberOfDuplicateFile" xml:space="preserve">
+    <value>Doppelte Dateien!</value>
+  </data>
+  <data name="NumberOfFile" xml:space="preserve">
+    <value>Gescannte Dateien!</value>
+  </data>
+  <data name="Rate" xml:space="preserve">
+    <value>Abtastrate (/ Sek.)!</value>
+  </data>
+  <data name="StartDate" xml:space="preserve">
+    <value>Startdatum</value>
+  </data>
+  <data name="user" xml:space="preserve">
+    <value>Benutzer</value>
+  </data>
+  <data name="Gr_FileByStatus" xml:space="preserve">
+    <value>Verteilung der Statusdatei!</value>
+  </data>
+  <data name="Gr_NumberOfDuplicateFile" xml:space="preserve">
+    <value>Entwicklung der Anzahl der kopierten Datei!</value>
+  </data>
+  <data name="Gr_NumberOfFile" xml:space="preserve">
+    <value>Entwicklung der Anzahl der Datei!</value>
+  </data>
+  <data name="Gr_SizeOfDuplicateFileByTime" xml:space="preserve">
+    <value>Evolution des Volumens der doppelte Dateien!</value>
+  </data>
+  <data name="GR_Vol_Duplique_Dern_Analyse" xml:space="preserve">
+    <value>Neue doppelte Dateien seit dem letzten Scan!</value>
+  </data>
+  <data name="TotalFileSize" xml:space="preserve">
+    <value>Gesamtvolumen analysiert</value>
+  </data>
+  <data name="GR_Size_By_Path" xml:space="preserve">
+    <value>Volumen für Ordner!</value>
+  </data>
+  <data name="q" xml:space="preserve">
+    <value>Qualifizieren</value>
+  </data>
+  <data name="adr" xml:space="preserve">
+    <value>Adresse:</value>
+  </data>
+  <data name="tel" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="mail" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="prenom" xml:space="preserve">
+    <value>*Vorname:</value>
+  </data>
+  <data name="Duration" xml:space="preserve">
+    <value>Analysedauer (in Sekunden)!</value>
+  </data>
+  <data name="QualifierDuration" xml:space="preserve">
+    <value>Berechnungszeit bis zur Qualifikation (in Sekunden)!</value>
+  </data>
+  <data name="DataBaseAccessDuration" xml:space="preserve">
+    <value>Dauer des Zugriffs auf die Datenbank!</value>
+  </data>
+</root>
