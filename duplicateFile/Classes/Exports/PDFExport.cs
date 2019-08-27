@@ -35,6 +35,11 @@ namespace duplicateFile.Classes.Exports
 
             table.Borders.Width = 0.75;
 
+            useDefaultCellStyle &= 
+                !(grd.Rows[0].DefaultCellStyle.BackColor.R ==0&&
+                grd.Rows[0].DefaultCellStyle.BackColor.G ==0&&
+                grd.Rows[0].DefaultCellStyle.BackColor.B == 0); //force 
+
             foreach (System.Windows.Forms.DataGridViewRow dr in grd.Rows)
             {
 

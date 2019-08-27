@@ -820,7 +820,6 @@ namespace duplicateFile
             {
                 case 1:
                     var ms=Classes.Exports.PDFExport.PDFFromGridView(gdv, true, _saveAs);
-                    ms.Close();
                     break;
                 case 2:
                     var dt = ((DataView)gdv.DataSource).ToTable();//_dvDoublons
