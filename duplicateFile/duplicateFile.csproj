@@ -577,6 +577,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <Content Include="licence CeCILL-C.txt" />
     <None Include="Resources\user_e.png" />
     <None Include="Resources\user_a.png" />
     <None Include="Resources\user.png" />

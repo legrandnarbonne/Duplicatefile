@@ -55,6 +55,8 @@ namespace duplicateFile
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.dgvDoublons = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ouvrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnStats = new JDComponentLib.BoutonPlus();
             this.lbNbDoublons = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -83,6 +85,8 @@ namespace duplicateFile
             this.trackQualifier = new System.Windows.Forms.TrackBar();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.ouvrirLeDossierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.supprimerLeFichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1.SuspendLayout();
             this.Actions.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -98,6 +102,7 @@ namespace duplicateFile
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoublons)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -158,8 +163,8 @@ namespace duplicateFile
             // 
             this.flowLayoutPanel2.Controls.Add(this.btnOpen);
             this.flowLayoutPanel2.Controls.Add(this.btnOpenFolder);
-            this.flowLayoutPanel2.Controls.Add(this.btnExport);
             this.flowLayoutPanel2.Controls.Add(this.btnSupp);
+            this.flowLayoutPanel2.Controls.Add(this.btnExport);
             this.flowLayoutPanel2.Controls.Add(this.btnUser);
             this.flowLayoutPanel2.Controls.Add(this.btnGraph);
             this.flowLayoutPanel2.Controls.Add(this.btnHash);
@@ -408,6 +413,7 @@ namespace duplicateFile
             // 
             this.dgvDoublons.AllowUserToAddRows = false;
             this.dgvDoublons.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDoublons.ContextMenuStrip = this.contextMenuStrip1;
             resources.ApplyResources(this.dgvDoublons, "dgvDoublons");
             this.dgvDoublons.Name = "dgvDoublons";
             this.dgvDoublons.ReadOnly = true;
@@ -415,7 +421,24 @@ namespace duplicateFile
             this.dgvDoublons.DataSourceChanged += new System.EventHandler(this.DataSourceChanged);
             this.dgvDoublons.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemContentDoubleClick);
             this.dgvDoublons.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_CellFormatting);
+            this.dgvDoublons.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_CellMouseDown);
             this.dgvDoublons.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvDoublons_UserDeletingRow);
+            this.dgvDoublons.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgv_KeyDown);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ouvrirToolStripMenuItem,
+            this.ouvrirLeDossierToolStripMenuItem,
+            this.supprimerLeFichierToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            resources.ApplyResources(this.contextMenuStrip1, "contextMenuStrip1");
+            // 
+            // ouvrirToolStripMenuItem
+            // 
+            this.ouvrirToolStripMenuItem.Name = "ouvrirToolStripMenuItem";
+            resources.ApplyResources(this.ouvrirToolStripMenuItem, "ouvrirToolStripMenuItem");
+            this.ouvrirToolStripMenuItem.Click += new System.EventHandler(this.ouvrirToolStripMenuItem_Click);
             // 
             // btnStats
             // 
@@ -464,12 +487,15 @@ namespace duplicateFile
             // dgvChemin
             // 
             this.dgvChemin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvChemin.ContextMenuStrip = this.contextMenuStrip1;
             resources.ApplyResources(this.dgvChemin, "dgvChemin");
             this.dgvChemin.Name = "dgvChemin";
             this.dgvChemin.ReadOnly = true;
             this.dgvChemin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvChemin.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemContentDoubleClick);
             this.dgvChemin.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_CellFormatting);
+            this.dgvChemin.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_CellMouseDown);
+            this.dgvChemin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgv_KeyDown);
             // 
             // lbNbChemin
             // 
@@ -506,11 +532,14 @@ namespace duplicateFile
             // dgvErreurs
             // 
             this.dgvErreurs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvErreurs.ContextMenuStrip = this.contextMenuStrip1;
             resources.ApplyResources(this.dgvErreurs, "dgvErreurs");
             this.dgvErreurs.Name = "dgvErreurs";
             this.dgvErreurs.ReadOnly = true;
             this.dgvErreurs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvErreurs.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemContentDoubleClick);
+            this.dgvErreurs.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_CellMouseDown);
+            this.dgvErreurs.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgv_KeyDown);
             // 
             // tabPage5
             // 
@@ -538,12 +567,15 @@ namespace duplicateFile
             // dgv2003
             // 
             this.dgv2003.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv2003.ContextMenuStrip = this.contextMenuStrip1;
             resources.ApplyResources(this.dgv2003, "dgv2003");
             this.dgv2003.Name = "dgv2003";
             this.dgv2003.ReadOnly = true;
             this.dgv2003.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv2003.DataSourceChanged += new System.EventHandler(this.DataSourceChanged);
             this.dgv2003.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgv_CellFormatting);
+            this.dgv2003.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_CellMouseDown);
+            this.dgv2003.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgv_KeyDown);
             // 
             // chkAttributs
             // 
@@ -594,10 +626,13 @@ namespace duplicateFile
             // dgvQualifier
             // 
             this.dgvQualifier.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvQualifier.ContextMenuStrip = this.contextMenuStrip1;
             resources.ApplyResources(this.dgvQualifier, "dgvQualifier");
             this.dgvQualifier.Name = "dgvQualifier";
             this.dgvQualifier.ReadOnly = true;
             this.dgvQualifier.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvQualifier.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_CellMouseDown);
+            this.dgvQualifier.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgv_KeyDown);
             // 
             // txtQualPath
             // 
@@ -641,6 +676,18 @@ namespace duplicateFile
             this.timer.Interval = 2000;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // ouvrirLeDossierToolStripMenuItem
+            // 
+            this.ouvrirLeDossierToolStripMenuItem.Name = "ouvrirLeDossierToolStripMenuItem";
+            resources.ApplyResources(this.ouvrirLeDossierToolStripMenuItem, "ouvrirLeDossierToolStripMenuItem");
+            this.ouvrirLeDossierToolStripMenuItem.Click += new System.EventHandler(this.ouvrirLeDossierToolStripMenuItem_Click);
+            // 
+            // supprimerLeFichierToolStripMenuItem
+            // 
+            this.supprimerLeFichierToolStripMenuItem.Name = "supprimerLeFichierToolStripMenuItem";
+            resources.ApplyResources(this.supprimerLeFichierToolStripMenuItem, "supprimerLeFichierToolStripMenuItem");
+            this.supprimerLeFichierToolStripMenuItem.Click += new System.EventHandler(this.supprimerLeFichierToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             resources.ApplyResources(this, "$this");
@@ -666,6 +713,7 @@ namespace duplicateFile
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoublons)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel2.ResumeLayout(false);
@@ -749,6 +797,10 @@ namespace duplicateFile
         private System.Windows.Forms.TextBox txtQualPath;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ouvrirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ouvrirLeDossierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem supprimerLeFichierToolStripMenuItem;
     }
 }
 

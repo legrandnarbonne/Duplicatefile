@@ -392,7 +392,7 @@ namespace duplicateFile.Classes
                 if (_config.EnableLog) SimpleLog.Log(ex);
             }
 
-            conn.Close();
+            if (conn!=null) conn.Close();
 
             SimpleLog.Log("End of folder analysis");
 
@@ -571,7 +571,7 @@ namespace duplicateFile.Classes
 
             finally
             {
-                conn.Close();
+                if (conn!=null) conn.Close();
             }
 
             SimpleLog.Log("End of Fileset analysis", SimpleLog.Severity.Info2);

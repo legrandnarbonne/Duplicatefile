@@ -195,7 +195,7 @@ namespace duplicateFile
             {
 
                 dgvDoublons.DataSource = _dvDoublons;
-                if (_dvDoublons.Count < 5000)
+                if (_dvDoublons!=null&&_dvDoublons.Count < 5000)
                     dgvDoublons.AutoResizeColumns(
                         DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
 
@@ -493,6 +493,16 @@ namespace duplicateFile
         /// </summary>
         private void boutonPlus1_Click()
         {
+            openSelectFilesFolders();
+        }
+
+        private void btnOpen_Click()
+        {
+            openSelectedFiles();
+        }
+
+        private void openSelectFilesFolders()
+        {
             foreach (var f in GetSelectedFileName())
             {
                 try
@@ -507,7 +517,7 @@ namespace duplicateFile
             }
         }
 
-        private void btnOpen_Click()
+        private void openSelectedFiles()
         {
             foreach (var f in GetSelectedFileName())
             {
@@ -852,6 +862,11 @@ namespace duplicateFile
 
         private void btnSupp_Click()
         {
+            deleteFile();
+        }
+
+        private void deleteFile()
+        {
             if (_bwSupp.IsBusy == true) return;
             ControlState(false);
 
@@ -1164,5 +1179,52 @@ namespace duplicateFile
             timer.Stop();
         }
 
+        private void ouvrirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openSelectedFiles();
+        }
+
+        private void dgv_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.ColumnIndex != -1 && e.RowIndex != -1 && e.Button == System.Windows.Forms.MouseButtons.Right)
+            {
+                DataGridViewCell c = (sender as DataGridView)[e.ColumnIndex, e.RowIndex];
+                if (!c.Selected)
+                {
+                    c.DataGridView.ClearSelection();
+                    c.DataGridView.CurrentCell = c;
+                    c.Selected = true;
+                }
+            }
+        }
+
+        private void dgv_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((e.KeyCode == Keys.F10 && e.Shift) || e.KeyCode == Keys.Apps)
+            {
+                e.SuppressKeyPress = true;
+                DataGridViewCell currentCell = (sender as DataGridView).CurrentCell;
+                if (currentCell != null)
+                {
+                    ContextMenuStrip cms = currentCell.ContextMenuStrip;
+                    if (cms != null)
+                    {
+                        Rectangle r = currentCell.DataGridView.GetCellDisplayRectangle(currentCell.ColumnIndex, currentCell.RowIndex, false);
+                        Point p = new Point(r.X + r.Width, r.Y + r.Height);
+                        cms.Show(currentCell.DataGridView, p);
+                    }
+                }
+            }
+        }
+
+        private void ouvrirLeDossierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openSelectFilesFolders();
+        }
+
+        private void supprimerLeFichierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            deleteFile();
+        }
     }
 }
