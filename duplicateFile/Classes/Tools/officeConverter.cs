@@ -61,6 +61,7 @@ namespace duplicateFile.Classes
             newFileName = fileName;
 
             if (!DestinationDictionary.ContainsKey(ext)) return false;
+            if (fileName.StartsWith("~*")) return false;
 
             var dest = DestinationDictionary[ext];
             newExt = dest.Extension;

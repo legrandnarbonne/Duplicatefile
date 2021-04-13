@@ -274,7 +274,7 @@ namespace duplicateFile
                 dgv.Columns[qo.ColumnName].Visible = false;
             }
 
-            dgv.Columns["q"].Visible = false;
+            if (dgv.Columns.Contains("q")) dgv.Columns["q"].Visible = false;
         }
 
         /// <summary>

@@ -53,7 +53,7 @@ namespace duplicateFile.Classes
             // report stats
             if (Analyser.Config.Bdd & Analyser.Config.AttStats)
             {
-                SimpleLog.Log("Preparing stats", SimpleLog.Severity.Exception);
+                SimpleLog.Log("Preparing stats.pdf file", SimpleLog.Severity.Exception);
                 var tempPath = Charts.ChartTools.draw(false);
                 Attachment stat = new Attachment(tempPath, pdfContentType);
                 stat.ContentDisposition.FileName = "stat.pdf";
@@ -62,15 +62,15 @@ namespace duplicateFile.Classes
             }
 
             // report error
-            if (Analyser.Config.AttError)
+            if (Analyser.Config.AttError&& dgvError.RowCount>0)
             {
                 var msError = PDFExport.PDFFromGridView(dgvError, false);
 
-                SimpleLog.Log("Preparing error report", SimpleLog.Severity.Info2);
+                SimpleLog.Log("Preparing error.pdf report", SimpleLog.Severity.Info2);
                 Attachment rap = new Attachment(msError, pdfContentType);
                 rap.ContentDisposition.FileName = "Error.pdf";
                 mail.Attachments.Add(rap);
-                SimpleLog.Log("file" + msError.Length, SimpleLog.Severity.Exception);
+                SimpleLog.Log("file length " + msError.Length, SimpleLog.Severity.Exception);
                 sendNeeded = sendIfNeeded(ref mail, client);
 
                 msError.Close();

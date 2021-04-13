@@ -680,6 +680,7 @@ namespace duplicateFile.Classes
                 conn.Open();
                 stAdapter.Fill(dtStats);
 
+                SimpleLog.Log("Adding stats to database");
                 var row = dtStats.NewRow();
                 _stats.ToDataRow(row);
 

@@ -124,8 +124,14 @@ namespace SimpleLogger
     /// }
     /// </code>
     /// </example>
+    /// 
+
+
     public static class SimpleLog
     {
+
+        static string _fileName;
+
         #region Enum Severity
 
         /// <summary>
@@ -291,8 +297,8 @@ namespace SimpleLogger
         {
             get
             {
-                return _extension ?? 
-                    (WriteText?"log":"xml");
+                return _extension ??
+                    (WriteText ? "log" : "xml");
             }
             set
             {
@@ -395,7 +401,8 @@ namespace SimpleLogger
         {
             get
             {
-                return GetFileName(DateTime.Now);
+                if (string.IsNullOrEmpty(_fileName)) _fileName = GetFileName(DateTime.Now);
+                return _fileName;
             }
         }
 
@@ -1170,10 +1177,10 @@ namespace SimpleLogger
                     {
                         using (var streamWriter = new StreamWriter(fileStream))
                         {
-                            
+
                             if (WriteText)
                             {// Write plain text
-                                
+
                                 streamWriter.WriteLine(ConvertXmlToPlainText(xmlEntry));
                             }
                             else
@@ -1186,13 +1193,13 @@ namespace SimpleLogger
                                 }
                                 else
                                     streamWriter.BaseStream.Seek(-15, SeekOrigin.End);
-                                
+
                                 streamWriter.WriteLine(xmlEntry);
                                 streamWriter.WriteLine("</LogEntries>");
                             }
-                           
-                                
-                           
+
+
+
                         }
                     }
                     return null;

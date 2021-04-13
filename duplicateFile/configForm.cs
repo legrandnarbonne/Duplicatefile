@@ -113,5 +113,9 @@ namespace duplicateFile
                 _config.Qualifiers.Add(q.GetType().Name);             
         }
 
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -11,13 +11,13 @@ using System.IO;
 
 namespace duplicateFile.Classes.Exports
 {
-    
+
 
     public static class PDFExport
     {
         public static Dictionary<string, double> colDivideur = new Dictionary<string, double> { { "Taille", 2.1 }, { "Status", 2.1 }, { "Hash", 0.6 }, { "Original", 2.1 }, { "Fichier", 0.5 } };
 
-        public static MemoryStream PDFFromGridView(System.Windows.Forms.DataGridView grd,bool useDefaultCellStyle, string path=null)
+        public static MemoryStream PDFFromGridView(System.Windows.Forms.DataGridView grd, bool useDefaultCellStyle, string path = null)
         {
             var document = new Document();
             var section = document.AddSection();
@@ -26,29 +26,34 @@ namespace duplicateFile.Classes.Exports
             section.PageSetup.Orientation = Orientation.Landscape;
             section.PageSetup.LeftMargin = new Unit(1, UnitType.Centimeter);
             section.PageSetup.RightMargin = new Unit(1, UnitType.Centimeter);
-            
+
             PDFTableHelper.setStyle(document);
 
             var table = PDFTableHelper.createTable(section,
                                                     getHeaders(grd),
-                                                    StyleNames.Header, colDivideur);        
+                                                    StyleNames.Header, colDivideur);
 
             table.Borders.Width = 0.75;
 
-            useDefaultCellStyle &= 
-                !(grd.Rows[0].DefaultCellStyle.BackColor.R ==0&&
-                grd.Rows[0].DefaultCellStyle.BackColor.G ==0&&
-                grd.Rows[0].DefaultCellStyle.BackColor.B == 0); //force 
+            if (grd.RowCount > 0)
+                useDefaultCellStyle &=
+                    !(grd.Rows[0].DefaultCellStyle.BackColor.R == 0 &&
+                    grd.Rows[0].DefaultCellStyle.BackColor.G == 0 &&
+                    grd.Rows[0].DefaultCellStyle.BackColor.B == 0); //force 
+
+            var cmpt = 0;
 
             foreach (System.Windows.Forms.DataGridViewRow dr in grd.Rows)
             {
+                cmpt++;
+                if (cmpt > 1000) break;
 
                 var currentRow = PDFTableHelper.addRowFromGridViewRow(table, dr, StyleNames.Normal);
 
                 currentRow.Shading.Color = useDefaultCellStyle ?
                     new Color(dr.DefaultCellStyle.BackColor.R, dr.DefaultCellStyle.BackColor.G, dr.DefaultCellStyle.BackColor.B) :
-                    new Color(255,255,255,255);
-                
+                    new Color(255, 255, 255, 255);
+
             }
 
             document.LastSection.Add(table);
@@ -60,7 +65,7 @@ namespace duplicateFile.Classes.Exports
             if (path != null) { renderer.PdfDocument.Save(path); return null; }
 
             MemoryStream ms = new MemoryStream();
-            renderer.PdfDocument.Save(ms,false);
+            renderer.PdfDocument.Save(ms, false);
 
             return ms;
         }
