@@ -34,17 +34,15 @@ namespace duplicateFile.Classes
             {".doc", new OfficeDestination(OfficeApplication.Word, ".docx", WdSaveFormat.wdFormatXMLDocument)},
             {".rtf", new OfficeDestination(OfficeApplication.Word, ".docx", WdSaveFormat.wdFormatXMLDocument)},
             {".dot", new OfficeDestination(OfficeApplication.Word, ".dotx", WdSaveFormat.wdFormatFlatXMLTemplate)},
+            {".odt", new OfficeDestination(OfficeApplication.Word, ".docx", WdSaveFormat.wdFormatXMLDocument)},
+
             {".xls", new OfficeDestination(OfficeApplication.Excel, ".xlsx", XlFileFormat.xlOpenXMLWorkbook)},
             {".xlt", new OfficeDestination(OfficeApplication.Excel, ".xltx", XlFileFormat.xlOpenXMLTemplate)},
-            {
-                ".ppt",
-                new OfficeDestination(OfficeApplication.PowerPoint, ".pptx",
-                    PpSaveAsFileType.ppSaveAsOpenXMLPresentation)
-            },
-            {
-                ".pot",
-                new OfficeDestination(OfficeApplication.PowerPoint, ".potx", PpSaveAsFileType.ppSaveAsOpenXMLTemplate)
-            }
+            {".ods", new OfficeDestination(OfficeApplication.Excel, ".xlsx", XlFileFormat.xlOpenXMLWorkbook)},
+
+            {".ppt", new OfficeDestination(OfficeApplication.PowerPoint, ".pptx",PpSaveAsFileType.ppSaveAsOpenXMLPresentation)},
+            {".pot", new OfficeDestination(OfficeApplication.PowerPoint, ".potx", PpSaveAsFileType.ppSaveAsOpenXMLTemplate)},
+            {".odp", new OfficeDestination(OfficeApplication.PowerPoint, ".pptx",PpSaveAsFileType.ppSaveAsOpenXMLPresentation)}
         };
 
         public static bool ConvertToNewOfficeDocument(string fileName, out string newFileName)
@@ -81,7 +79,7 @@ namespace duplicateFile.Classes
                     try
                     {
                         wordDoc = _wordApp.Documents.Open(fileName);
-                        wordDoc.Convert();
+                        if (Path.GetExtension(fileName)!=".odt") wordDoc.Convert();
                         if (wordDoc.HasVBProject)
                         {
                             newFileName = ReplaceExtension(newFileName, ".docm");

@@ -225,7 +225,7 @@ namespace duplicateFile
             ResourceHelper.setHeaders(dgvErreurs);
 
             _dv2003 = new DataView(Analyser.Dset.Tables[0],
-                "Fichier like '%.doc' or Fichier like '%.rtf' or Fichier like '%.dot' or Fichier like '%.xls' or Fichier like '%.ppt'"
+                "Fichier like '%.doc' or Fichier like '%.rtf' or Fichier like '%.dot' or Fichier like '%.xls' or Fichier like '%.ppt' or Fichier like '%.odt' or Fichier like '%.ods' or Fichier like '%.odp'"
                 , "Fichier asc", DataViewRowState.CurrentRows);
 
             dgv2003.DataSource = _dv2003;
